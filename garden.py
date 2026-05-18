@@ -72,11 +72,6 @@ def advance_day(garden):
     if not garden:
         return True
 
-    # for row in garden:
-    #     for cell in row:
-    #         if cell["water"] > 0:
-    #             cell["water"] -= 1
-
     for row in garden:
         for cell in row:
             if cell["state"] == "seed" and cell["water"] >= GROWTH_WATER_NEEDED:
