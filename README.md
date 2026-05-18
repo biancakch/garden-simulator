@@ -1,9 +1,6 @@
 # Garden-Simulator
 
-A didactically simple CLI application for Python beginners.
-
 ## How The Project Is Organized
-
 
 The rules of the garden simulator live in `garden.py`. This file uses simple functions and core programming concepts. Most of the edits you have to perform in this file.
 

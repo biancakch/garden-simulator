@@ -1,4 +1,5 @@
 import ast
+import re
 from pathlib import Path
 
 from garden import (
@@ -204,7 +205,10 @@ def test_aufgabe_3_harvest_tomato_prints_message(capsys):
     assert harvest(garden, 0, 0) == "tomato"
 
     captured = capsys.readouterr()
-    assert "created file 'tomato.txt'" in captured.out.lower()
+    assert re.search(
+        r"Created file 'tomato\.txt' at \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}:\d{2}",
+        captured.out,
+    )
 
 
 def test_aufgabe_4_potatoe_can_be_harvested_after_two_water_day_cycles():
